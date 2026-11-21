@@ -4,11 +4,15 @@ st.set_page_config(page_title="AISE Deployment Demo")
 st.title("AI-Enabled Software Engineering")
 st.header("Cloud Deployment Demonstration")
 st.write("This application is running as a cloud deployment demo.")
-name = st.text_input("Enter your name")
+name = st.text_input(
+    "Enter your name. How would you like to proceed with the application?"
+)
 
 if st.button("Submit"):
     if name.strip():
-        st.success(f"Hello, {name}! Your application is working.")
+        st.success(
+            f"Hello, {name}! Your application is working. How would you like to proceed?"
+        )
     else:
         st.warning("Please enter your name.")
 
